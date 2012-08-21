@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>QUnit Test Suite</title>
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.9.0.css" type="text/css" media="screen">
+    <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.9.0.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="qunit-tap/qunit-tap.js"></script>
+    <script>
+        qunitTap(QUnit, function () {
+            console.log.apply(console, arguments);
+        }, {noPlan:true});
+    </script>
+    <!--requireJSを読み込む-->
+    <script type="text/javascript" src="http://requirejs.org/docs/release/2.0.6/comments/require.js"></script>
+    <script type="text/javascript">
+        // Specファイルをロードしてテストを行う
+        require([
+            'test',
+            'domTest'
+        ], function () {
+            console.log("START SPEC TEST");
+        });
+    </script>
+</head>
+<body>
+<h1 id="qunit-header">QUnit SubsuiteRunner Test Suite</h1>
+
+<h2 id="qunit-banner"></h2>
+
+<div id="qunit-testrunner-toolbar"></div>
+<h2 id="qunit-userAgent"></h2>
+<ol id="qunit-tests"></ol>
+<div id="qunit-fixture">
+
+</div>
+</body>
+</html>
